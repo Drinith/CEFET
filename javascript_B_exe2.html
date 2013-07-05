@@ -1,0 +1,77 @@
+<html>
+	
+	<head>
+		<meta charset="utf-8" />
+		
+		<style >
+		input[type="text"] {
+				width: 20px;
+		}
+		</style>
+			
+			
+		<script>
+		
+			
+			
+			function calc(){
+				
+				var  a = parseFloat (document.formularioequa.elements["a"].value);
+				var  b = parseFloat (document.formularioequa.elements["b"].value);
+				var  c = parseFloat (document.formularioequa.elements["c"].value);
+				var delta = 0.0;		
+				
+				if(a!=0){
+				
+				
+					var x1 =0.0;
+					var x2=0.0;
+					
+					delta = (b*b) - (4*a*c);
+					
+					if (delta>0){
+						
+						x1= (-b+(delta^0.5))/2*a;
+						x2= (-b-(delta^0.5))/2*a;
+					
+						alert(" Possui duas raízes Reais x1="+ x1+" x2="+x2); 
+					}
+					
+					if(delta ==  0){
+						x1 = (-b/2*a);
+						alert(" Possui uma raíz Real x="+ x1); 
+					}
+					
+					if(delta<0){
+						
+						alert("Só existe raízes imaginárias");
+						
+					
+					}
+				
+				}//if teste se é uma equação de segundo grau
+				else
+				{
+					alert("Não é uma equação de segundo grau");
+				
+				}
+			}//fim calcular
+			
+			
+			
+		</script>
+	
+	</head>
+	<body>
+	
+		<form name="formularioequa" action="post">
+		
+			<input type="text" name="a" /> x² + <input type="text" name="b" /> x + <input type="text" name="c" /> = 0 </br>
+		
+			<input type="button" name="calcular" value="calcular" onclick="calc();"/> 
+		
+		</form> 
+	
+	</body>
+
+</html>

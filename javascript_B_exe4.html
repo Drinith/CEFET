@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		
+			<style>
+			
+				*{
+					border: 1px dashed gray;
+					padding : 0px;
+					margin: 0px;
+				}
+				
+				
+				#content{
+					margin: auto;
+				}
+				
+				form {
+					width: 252px;
+					margin: auto;
+				}
+				
+				span{
+					font-size: 44px;
+				}
+				
+				
+				
+				input[type="text"] {
+					width: 46px;
+					height: 46px;
+					font-size: 40px;
+				}	
+									
+			</style>
+			
+			<script type="text/javascript" >
+			
+				function executa()
+				{
+					var x = parseFloat(document.formulario.elements["xvalor"].value);
+					
+					if(x<=1)
+					{
+						document.formulario.elements["yvalor"].value = 1;	
+					}
+					
+					if(x>1 && x<=2)
+					{
+						document.formulario.elements["yvalor"].value = 2;
+					}	
+
+					
+					if(x>2 && x<=3)
+					{
+						document.formulario.elements["yvalor"].value = x*x;
+					}	
+					
+						if(x>3)
+					{
+						document.formulario.elements["yvalor"].value = x*x*x;
+					}	
+					
+				}
+				
+			
+				
+			
+			</script>
+			
+	</head>
+	
+	<body>
+	
+		<div id="content">
+			<form name="formulario" action="get">
+	
+				<span>f(<input type="text" name="xvalor" />) = 
+				<input type="text" name="yvalor"  /> 
+				<!-- perguntar  se existe algum problema do elemento ter o mesmo nome da função -->
+				<input type="button" name="executar" value="executar" onclick="executa()" /></span>
+				
+				
+			</form>
+		</div>
+	</body>
+
+</html>
+
