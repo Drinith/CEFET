@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Iteração Matrizes exe 2</title>
+		<meta charset="utf-8"/>
+		
+		<style>
+			
+			*{
+				border: 0;			
+				margin: 0;			
+			}	
+			
+			td{
+				border: 1px solid black;			
+			}
+		
+		
+		</style>		
+	
+		
+		<script type="text/javascript" >
+
+			var linha = parseInt(window.prompt("Digite o número de linhas"));
+			var coluna = parseInt(window.prompt("Digite o número de coluna"));
+
+			function imprimaTabela(lin,col){
+				
+				document.write("<table>");
+				for(var l=1;l<=lin; l++ ){
+							
+					document.write("<tr>");
+					
+					for(var c=1;c<=col;c++) {
+						
+						document.write("<td>"+parseInt(Math.random()*100)+"</td>");
+					}		
+													
+				document.write("</tr>");		
+				
+				}
+				
+			document.write("</table>");
+			} //Fim imprimirTabela
+			
+			imprimaTabela(linha,coluna);
+
+
+			
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>

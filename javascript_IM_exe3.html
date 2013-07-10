@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charsert="utf-8"/>
+
+		<script type="text/javascript">
+
+			var qtdAluno = parseInt(window.prompt("Digite a quantidade de alunos"));
+
+			var boletim = new Array();
+
+			var notaCorte = parseInt(window.prompt("Digite a nota de corte"));
+
+			var teste= false;
+			for (var count=1; count<=qtdAluno; count++){
+
+				boletim.push(["Aluno"+count,parseFloat(window.prompt("Digite a nota do aluno "+"Aluno"+count))]);
+			
+			}
+
+			for (var count=1; count<=qtdAluno; count++){
+				
+				if (boletim[count-1][1]>notaCorte) {
+
+
+					document.write("<table><tr><th>Nome</th><th>nota</tr></tr><tr><td>"+boletim[count-1][0]+"</td><td>"+boletim[count-1][1]+"</td>")
+
+					teste = true;
+				}
+
+			}
+
+			if(teste){
+				document.write("</table>");
+			}
+			else{
+
+				document.write("Não houve nenhum aluno dentro da nota de corte"); 
+			}
+
+		</script>
+
+	</head>
+	<body>
+		
+
+	</body>
+
+</html>
